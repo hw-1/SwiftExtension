@@ -29,10 +29,10 @@
 
 /* Begin PBXFileReference section */
 		04EA774A43150120DC48ED11 /* Pods-SwiftExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftExtension_Tests/Pods-SwiftExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1A9CDE35C99049FA69C1F124 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1A9CDE35C99049FA69C1F124 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		221470F445894B1126832D92 /* Pods-SwiftExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-SwiftExtension_Example/Pods-SwiftExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		31A4ECC854F6AC44FD1CB655 /* Pods-SwiftExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-SwiftExtension_Example/Pods-SwiftExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3D250F9B54EF47DE27614CEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		3D250F9B54EF47DE27614CEE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		6785DC258393BB9EBC8496FC /* Pods-SwiftExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SwiftExtension_Tests/Pods-SwiftExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D9A39E07987683FF0D2E3FEC /* Pods_SwiftExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E688AED109C877E3520109A5 /* Pods_SwiftExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6ABFE238E0D9CE1756A5BB3 /* SwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftExtension.podspec; path = ../SwiftExtension.podspec; sourceTree = "<group>"; };
+		F6ABFE238E0D9CE1756A5BB3 /* SwiftExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftExtension.podspec; path = ../SwiftExtension.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +156,6 @@
 				6785DC258393BB9EBC8496FC /* Pods-SwiftExtension_Tests.debug.xcconfig */,
 				04EA774A43150120DC48ED11 /* Pods-SwiftExtension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LZ5TGFY9AN;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = LZ5TGFY9AN;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -267,15 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SwiftExtension_Example/Pods-SwiftExtension_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftExtension/SwiftExtension.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftExtension.framework",
 			);
@@ -482,6 +480,7 @@
 			baseConfigurationReference = 31A4ECC854F6AC44FD1CB655 /* Pods-SwiftExtension_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LZ5TGFY9AN;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -497,6 +496,7 @@
 			baseConfigurationReference = 221470F445894B1126832D92 /* Pods-SwiftExtension_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LZ5TGFY9AN;
 				INFOPLIST_FILE = SwiftExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -511,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6785DC258393BB9EBC8496FC /* Pods-SwiftExtension_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LZ5TGFY9AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -533,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 04EA774A43150120DC48ED11 /* Pods-SwiftExtension_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = LZ5TGFY9AN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftExtension'
-  s.version          = '0.1.0'
+  s.version          = '1.0.1'
   s.summary          = 'A short description of SwiftExtension.'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'SwiftExtension/Classes/**/*'
-  
+
   # s.resource_bundles = {
   #   'SwiftExtension' => ['SwiftExtension/Assets/*.png']
   # }
