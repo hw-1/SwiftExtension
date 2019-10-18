@@ -9,7 +9,7 @@
 import UIKit
 
 public extension UIColor{
-convenience init(colorHex hex: UInt, alpha: CGFloat = 1) {
+  convenience init(colorHex hex: UInt, alpha: CGFloat = 1) {
     var aph = alpha
     if aph < 0 {
         aph = 0
@@ -27,7 +27,7 @@ convenience init(colorHex hex: UInt, alpha: CGFloat = 1) {
 
 
 extension UIColor {
-    static func random() -> UIColor {
+   public  static func random() -> UIColor {
         return UIColor(red: .random(),
                        green: .random(),
                        blue: .random(),

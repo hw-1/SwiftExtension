@@ -9,7 +9,7 @@
 import UIKit
 
 extension String {
-    static func dictionary(data: Data) -> [String: Any]? {
+   public static func dictionary(data: Data) -> [String: Any]? {
         do {
             if let anyResult = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                  return anyResult
@@ -21,7 +21,7 @@ extension String {
         return nil
     }
     
-    func currencyFormat() -> String? {
+   public func currencyFormat() -> String? {
         if let number = NumberFormatter().number(from: self) {
             let none = NumberFormatter.localizedString(from: number, number: .none)
             return none
@@ -33,19 +33,19 @@ extension String {
 
 
 extension String {
-  subscript(_ i: Int) -> String {
+ public subscript(_ i: Int) -> String {
     let idx1 = index(startIndex, offsetBy: i)
     let idx2 = index(idx1, offsetBy: 1)
     return String(self[idx1..<idx2])
   }
 
-  subscript (r: Range<Int>) -> String {
+ public  subscript (r: Range<Int>) -> String {
     let start = index(startIndex, offsetBy: r.lowerBound)
     let end = index(startIndex, offsetBy: min(r.upperBound,self.count))
     return String(self[start ..< end])
   }
 
-  subscript (r: CountableClosedRange<Int>) -> String {
+ public  subscript (r: CountableClosedRange<Int>) -> String {
     let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)
     let endIndex = self.index(startIndex, offsetBy: r.upperBound - r.lowerBound)
     return String(self[startIndex...endIndex])

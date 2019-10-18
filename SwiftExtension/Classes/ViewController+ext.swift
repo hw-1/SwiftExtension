@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIViewController {
-    class func loadViewController(withIdentifier: String) -> UIViewController {
+   public class func loadViewController(withIdentifier: String) -> UIViewController {
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = mainStoryboard.instantiateViewController(withIdentifier: withIdentifier)
         //        UIApplication.shared.keyWindow?.rootViewController = viewController;
@@ -18,7 +18,7 @@ extension UIViewController {
 }
 
 extension UIViewController {
-    static func loadFromNib() -> Self {
+   public static func loadFromNib() -> Self {
         func instantiateFromNib<T: UIViewController>() -> T {
             return T.init(nibName: String(describing: T.self), bundle: nil)
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension Int {
-    func indexString() -> String {
+  public  func indexString() -> String {
         var count = 0
          for _ in 1...(self + 1) {
             count += 1
