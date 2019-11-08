@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1351BE582374F91100FDE1F5 /* URL+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1351BE572374F91100FDE1F5 /* URL+ext.swift */; };
+		1351BE74237510F700FDE1F5 /* FileManager+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1351BE73237510F700FDE1F5 /* FileManager+ext.swift */; };
 		322C4FF4E77B2D93BB2A428226A7F1D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		4F83381F2D9DE1CB322D242A900041E0 /* String+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F11B7BDF1953ABD853757507144EB9D /* String+ext.swift */; };
 		516FA505D9454FECBCBBD7DE8C99AEA7 /* Pods-SwiftExtension_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D3000E126E1C54D485C1AFF0CE9092BC /* Pods-SwiftExtension_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,6 +48,7 @@
 		0D25A3D5E86DD02A744ED56312131517 /* SwiftExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftExtension-Info.plist"; sourceTree = "<group>"; };
 		0D9469E5ACF55304FFB910990F111FDD /* Pods-SwiftExtension_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftExtension_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		1351BE572374F91100FDE1F5 /* URL+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "URL+ext.swift"; path = "SwiftExtension/Classes/URL+ext.swift"; sourceTree = "<group>"; };
+		1351BE73237510F700FDE1F5 /* FileManager+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "FileManager+ext.swift"; path = "SwiftExtension/Classes/FileManager+ext.swift"; sourceTree = "<group>"; };
 		1AE10C3EA96E683B56EBC2459689955A /* Pods-SwiftExtension_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SwiftExtension_Tests-dummy.m"; sourceTree = "<group>"; };
 		25B49AF05FB08C81F5A8B61F0ADFECF0 /* SwiftExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftExtension.modulemap; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -137,6 +139,7 @@
 				C985C21323ADCA5E2AB64C3B16506D58 /* Int+ext.swift */,
 				3F11B7BDF1953ABD853757507144EB9D /* String+ext.swift */,
 				FC5D23D6DDAE02029DDD5576B281DB02 /* UIButton+ext.swift */,
+				1351BE73237510F700FDE1F5 /* FileManager+ext.swift */,
 				1351BE572374F91100FDE1F5 /* URL+ext.swift */,
 				5F908B9BD2E16AE3411BFC05C9A1FF65 /* UIColor+ext.swift */,
 				7916ECF1B2C040FCCF17411025C28705 /* UIView+ext.swift */,
@@ -400,6 +403,7 @@
 				9F51043C7E50BF8AEA1484C6DDA61111 /* UIButton+ext.swift in Sources */,
 				F45166A187147A89203288F38A2536A0 /* UIColor+ext.swift in Sources */,
 				A5F24451DADAF9C935F500FB40A0556B /* UIView+ext.swift in Sources */,
+				1351BE74237510F700FDE1F5 /* FileManager+ext.swift in Sources */,
 				1351BE582374F91100FDE1F5 /* URL+ext.swift in Sources */,
 				A34DC643C485D93C7DB97FEE2DE11A30 /* ViewController+ext.swift in Sources */,
 			);
