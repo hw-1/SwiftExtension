@@ -51,3 +51,32 @@ extension String {
     return String(self[startIndex...endIndex])
   }
 }
+
+
+extension String {
+    func encodeUrl() -> String? {
+        return self.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)
+    }
+    func decodeUrl() -> String? {
+        return self.removingPercentEncoding
+    }
+}
+
+extension String {
+    
+    //Encode base64
+    func base64Encoded() -> String {
+        let plainData = self.data(using: String.Encoding.utf8)
+        let base64String = plainData?.base64EncodedString(options: [])
+        return base64String!
+    }
+    
+    //Decode base64
+    func base64Decoded() -> String {
+        let decodedData = Data(base64Encoded: self, options: [])
+        let decodedString = NSString(data: decodedData!, encoding: String.Encoding.utf8.rawValue)
+        return decodedString! as String
+    }
+
+}
+
