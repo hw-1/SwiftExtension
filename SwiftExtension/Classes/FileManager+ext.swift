@@ -28,8 +28,9 @@ extension FileManager {
             if FileManager.default.fileExists(atPath: dstURL.path) {
                 try FileManager.default.removeItem(at: dstURL)
             }
-            if !FileManager.default.fileExists(atPath: dstURL.path) {
-                FileManager.default.createFile(atPath:dstURL.path , contents: nil, attributes: [:])
+            let dst = dstURL.deletingLastPathComponent()
+            if !FileManager.default.fileExists(atPath: dst.path) {
+                try FileManager.default.createDirectory(at: dst, withIntermediateDirectories: true, attributes: [:])
             }
             try FileManager.default.copyItem(at: srcURL, to: dstURL)
         } catch (let error) {
