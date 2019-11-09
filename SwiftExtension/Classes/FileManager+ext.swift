@@ -23,10 +23,13 @@ extension FileManager {
         return documentsDirectory
     }
     
-    public static func copy(at srcURL: URL, to dstURL: URL) -> Bool {
+    public static func copyWith(srcURL: URL, to dstURL: URL) -> Bool {
         do {
             if FileManager.default.fileExists(atPath: dstURL.path) {
                 try FileManager.default.removeItem(at: dstURL)
+            }
+            if !FileManager.default.fileExists(atPath: dstURL.path) {
+                FileManager.default.createFile(atPath:dstURL.path , contents: nil, attributes: [:])
             }
             try FileManager.default.copyItem(at: srcURL, to: dstURL)
         } catch (let error) {
