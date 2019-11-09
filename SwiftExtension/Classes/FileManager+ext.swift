@@ -36,12 +36,16 @@ extension FileManager {
         return true
     }
     
-    func remove(at fileURL:URL){
+    public static func removeWith(fileURL:URL){
         //file
         if #available(iOS 9.0, *) {
             if !fileURL.hasDirectoryPath {
                 if FileManager.default.fileExists(atPath:fileURL.path ){
-                    FileManager.default.remove(at: fileURL)
+                    do {
+                        try FileManager.default.removeItem(at:fileURL )
+                    }catch{
+                        print("Could not remove \(fileURL): \(error)")
+                    }
                 }
                 return
             }
