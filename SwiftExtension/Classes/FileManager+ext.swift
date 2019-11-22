@@ -40,10 +40,30 @@ extension FileManager {
         return true
     }
     
+    public static func createDirectoryWith(fileURL:URL){
+        do {
+            if !FileManager.default.fileExists(atPath: fileURL.path) {
+                try FileManager.default.createDirectory(at: fileURL, withIntermediateDirectories: true, attributes: [:])
+            }
+        } catch {
+            print("Could not remove \(fileURL): \(error)")
+        }
+    }
+    
+    public  static func isDirectory(fileURL:URL) -> Bool{
+        let fileManager = FileManager.default
+        var isDir : ObjCBool = false
+        if fileManager.fileExists(atPath: fileURL.path, isDirectory:&isDir) {
+            return isDir.boolValue
+        }
+        return false
+    }
+    
     public static func removeWith(fileURL:URL){
+         
         //file
         if #available(iOS 9.0, *) {
-            if !fileURL.hasDirectoryPath {
+            if !FileManager.isDirectory(fileURL: fileURL) {
                 if FileManager.default.fileExists(atPath:fileURL.path ){
                     do {
                         try FileManager.default.removeItem(at:fileURL )
@@ -59,9 +79,10 @@ extension FileManager {
         
         // directory
         do {
+             
             let filePaths = try FileManager.default.contentsOfDirectory(atPath: fileURL.path)
             for filePath in filePaths {
-                try FileManager.default.removeItem(atPath: filePath)
+                try FileManager.default.removeItem(atPath: fileURL.appendingPathComponent(filePath).path)
             }
         } catch {
             print("Could not remove \(fileURL): \(error)")
