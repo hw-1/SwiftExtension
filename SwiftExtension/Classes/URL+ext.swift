@@ -1,12 +1,8 @@
-//
-//  URL+ext.swift
-//  SwiftExtension
-//
-//  Created by t on 2019/11/8.
-//
+ import UIKit
 
-import UIKit
-
-extension  URL {
- 
+extension URL {
+    func valueOf(_ queryParameterName: String) -> String? {
+        guard let url = URLComponents(string: self.absoluteString) else { return nil }
+        return url.queryItems?.first(where: { $0.name == queryParameterName })?.value
+    }
 }
